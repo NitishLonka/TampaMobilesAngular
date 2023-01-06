@@ -74,7 +74,7 @@
             }
           },
           "options": {
-            "browserTarget": "appui:build",
+            "browserTarget": "test:build",
             "proxyConfig": "proxy.conf.json"
           },
           "defaultConfiguration": "development"
