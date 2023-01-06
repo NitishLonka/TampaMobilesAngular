@@ -1,0 +1,18 @@
+.padding{
+ margin-bottom: 0.5rem;
+}
+.col-sm{
+    margin-bottom: 1em;
+}
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+
+@media (min-width: 1180px) {
+    .card-columns {
+        column-count: 4;
+    }
+}

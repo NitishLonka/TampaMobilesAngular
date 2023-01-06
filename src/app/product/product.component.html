@@ -1,0 +1,30 @@
+
+
+<div class="card mb-3">
+    <div class="row">
+      <div class="col-5" style="margin:3em;">
+        <img src={{product.img}} class="img-fluid rounded-start" style="width:25rem;height:30rem;" alt="...">
+      </div>
+      <div class="col-6" >
+        <div class="card-body" >
+          <h3 class="card-title">{{product.name}}</h3>
+          <h5 class="card-text"><small class="text-muted">{{product.description}}</small></h5>
+          <h4 class="card-text">${{product.price}}</h4>
+          </div>
+        <div class="card-body">
+          <h5 class="card-text"><b>Features</b></h5>
+          <ul>
+            <li>6 GB RAM | 128 GB ROM</li>
+            <li>14.76 cm (5.81 inch) Full HD+ Display</li>
+            <li>12.2MP Rear Camera | 8MP Front Camera</li>
+            <li>3140 mAh Battery</li>
+            <li>Qualcomm Snapdragon 730G Processor</li>
+            <li>OLED Display</li>
+          </ul>
+          </div>
+          <div class="card-body">
+          <a routerLink="/products" class="btn btn-outline-primary" > Back to Products</a>
+          </div>
+        </div>
+      </div>
+    </div>

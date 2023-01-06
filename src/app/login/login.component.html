@@ -1,0 +1,125 @@
+<div >
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-5 offset-md-1" >
+                <div class="card my-5">
+                <div class="card-body greenbg p-lg-5">
+                        <div class="form-group col-md-6">
+                          <label for="inputUserName">User Name</label>
+                          <input type="email" class="form-control"  placeholder="User Name" [(ngModel)]="user.username" name="username" required minlength="8"#username="ngModel">
+                        </div>
+                        <div *ngIf="username.invalid && (username.dirty || username.touched)"  class="alert alert-danger ht">
+                            <div *ngIf="username.errors?.['required']">
+                             User Name is required.
+                            </div>
+                            <div *ngIf="username.errors?.['minlength']">
+                            User Name must be at least 8 characters long.
+                            </div>
+                            </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputPassword">Password</label>
+                          <input type="password" class="form-control"  placeholder="Password" [(ngModel)]="user.password" name="password" required minlength="8"#password="ngModel">
+                        </div>
+                        <div *ngIf="password.invalid && (password.dirty || password.touched)"  class="alert alert-danger">
+                            <div *ngIf="password.errors?.['required']">
+                             Password is required.
+                            </div>
+                            <div *ngIf="password.errors?.['minlength']">
+                             Password must be at least 8 characters long.
+                            </div>
+                            </div>
+                  <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control"  placeholder="First Name" [(ngModel)]="user.firstname" name="first"  required minlength="4" #first="ngModel">
+                  </div>
+                  <div *ngIf="first.invalid && (first.dirty || first.touched)"  class="alert alert-danger">
+                  <div *ngIf="first.errors?.['required']">
+                   First Name is required.
+                  </div>
+                  <div *ngIf="first.errors?.['minlength']">
+                   Name must be at least 4 characters long.
+                  </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control"  placeholder="Last Name" [(ngModel)]="user.lastname" name="last">
+                  </div>
+                 </div>
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input type="text" class="form-control"  placeholder="1234 Main St" [(ngModel)]="user.address" name="address" required #address="ngModel">
+                </div>
+                <div *ngIf="address.invalid && (address.dirty || address.touched)"  class="alert alert-danger">
+                    <div *ngIf="address.errors?.['required']">
+                     Address is required.
+                    </div>
+                    </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Address 2</label>
+                  <input type="text" class="form-control"  placeholder="Apartment, studio, or floor" [(ngModel)]="user.address2"name="address2">
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.city"name="city" required #city="ngModel">
+                  </div>
+                  <div *ngIf="city.invalid && (city.dirty || city.touched)"  class="alert alert-danger">
+                    <div *ngIf="city.errors?.['required']">
+                     City is required.
+                    </div>
+                    </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputState">State</label>
+                    <input type="text" class="form-control"  [(ngModel)]="user.state" name="state" required #state="ngModel">
+                  </div>
+                  <div *ngIf="state.invalid && (state.dirty || state.touched)"  class="alert alert-danger">
+                    <div *ngIf="state.errors?.['required']">
+                        state is required.
+                    </div>
+                    </div>
+                </div>
+                  <div class="mb-3">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.zipcode" name="zip" required #zip="ngModel">
+                  </div>
+                  <div *ngIf="zip.invalid && (zip.dirty || zip.touched)"  class="alert alert-danger">
+                    <div *ngIf="zip.errors?.['required']">
+                        Zip is required.
+                    </div>
+                    </div>
+                <div class="text-center"><button type="submit" class="btn register px-5 mb-5 w-100" (click)="register(user)">Register / Sign up</button></div>
+               
+                <div *ngIf="message1" class="alert alert-danger">
+                    {{message1}}
+                    </div>
+            </div>
+            </div>
+            </div>
+          <div class="col-md-5 offset-md-1">
+            <div class="card my-5">
+    
+              <form class="card-body cardbody-color p-lg-5">
+    
+                <div class="text-center">
+                  <img src="../../assets/images/login.jpg" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                    width="200px" alt="profile">
+                </div>
+    
+                <div class="mb-3">
+                  <input type="text" class="form-control" aria-describedby="emailHelp"
+                    placeholder="User Name" [(ngModel)]="user.username1" #username1="ngModel" name="username1">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" placeholder="password" [(ngModel)]="user.password1" #password1="ngModel" name="password1">
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100" (click)="userLogin()">Login</button></div>
+                
+              </form>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      </div>
