@@ -73,6 +73,10 @@
               "browserTarget": "test:build:development"
             }
           },
+          "options": {
+            "browserTarget": "appui:build",
+            "proxyConfig": "proxy.conf.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
