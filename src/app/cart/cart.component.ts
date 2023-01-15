@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
   number:any
   totalamount=0
   @Input() data:any=[]
+  isdisabled:boolean=true
   constructor(private service:CommonService,public activatedRoute:ActivatedRoute,private pservice:ProductsService,private router:Router) { 
 
    
@@ -28,6 +29,7 @@ export class CartComponent implements OnInit {
     {
       this.totalamount+=this.data[i].price
     } 
+    this.isdisabled = this.totalamount==0?true:false;
     })
   }
    changequantity(id:any,num:number){
@@ -43,6 +45,7 @@ export class CartComponent implements OnInit {
     {
       this.totalamount+=this.data[i].price
     }
+    this.isdisabled = this.totalamount==0?true:false;
     console.log(this.data)
    }
    delete(id:number)

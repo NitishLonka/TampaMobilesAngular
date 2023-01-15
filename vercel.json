@@ -3,7 +3,7 @@
      
       {
         "source": "/api/:path*",
-        "destination": "https://tampa-mobiles-api-service-lpkq-i0st8xbvh-nitishlonka.vercel.app/:path*"
+        "destination": "https://tampa-mobiles-api-service-lpkq-i0st8xbvh-nitishlonka.vercel.app/api/:path*"
       }
     ]
   }
