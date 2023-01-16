@@ -16,6 +16,8 @@ import { PaymentsuccessComponent } from './paymentsuccess/paymentsuccess.compone
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { ProductsService } from './products.service';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { LoadingInterceptor } from './loading.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { ProductsService } from './products.service';
     CartComponent,
     AccountComponent,
     LoginComponent,
-    PaymentsuccessComponent
+    PaymentsuccessComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { ProductsService } from './products.service';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [{provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true},AuthGuard,ProductsService],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:LoadingInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
